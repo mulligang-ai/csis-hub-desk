@@ -75,7 +75,13 @@ async function main() {
   } catch (e) {
     fail(`That token didn't work. ${e.message}`);
   }
-  if (!orgs?.length) fail("Your Supabase account has no organisation. Create one at supabase.com, then run this again.");
+  if (!orgs?.length) {
+    fail(
+      "This token can't see any organisations. Delete it, then on the token page click\n" +
+        '  "Generate new token" → "Create legacy token" and run this again with that token.\n' +
+        "  (If you really have no organisation yet, create one at supabase.com first.)",
+    );
+  }
 
   // ---- 2. Project ----------------------------------------------------------
   say("\nStep 2 — Project");
