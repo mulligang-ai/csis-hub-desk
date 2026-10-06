@@ -3,7 +3,16 @@
 A help desk (tickets, shared inbox, customers, canned responses, help docs, customer portal).
 Agent app: `/desk`. Customer portal: `/support`. Help docs: `/support/docs`.
 
-## 1. Supabase
+## Quick setup (recommended)
+```
+npm install
+npm run setup
+```
+The script opens Supabase in your browser so you can sign in and create an access token, then
+creates the project (EU region), sets up the database, turns off "confirm email" and writes `.env.local`.
+Then run `npm run dev` and create your account at http://localhost:3000/desk/login.
+
+## 1. Supabase (manual alternative)
 1. Create a project, then run `supabase/migrations/0001_csis.sql` in the SQL editor.
 2. Copy `.env.example` to `.env.local` and fill in the URL, anon key and service-role key.
 3. Open `/desk/login` → **Create an account**. The first account becomes the admin; later sign-ups
