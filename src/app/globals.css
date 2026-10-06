@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Palette -------------------------------------------------------- */
+  /* Clean white ground, royal blue primary, near-black headings, coral accent. */
+  --color-paper: #fefefe;
+  --color-mist: #f6f7f9;
+  --color-mist-deep: #eef1f6;
+
+  --color-ink: #212121;
+  --color-heading: #262b32;
+  --color-muted: #60697b;
+  --color-faint: #aab0bc;
+
+  --color-brand: #2153b0;
+  --color-brand-deep: #1a4390;
+  --color-brand-dark: #143163;
+  --color-brand-tint: #e0e9fa;
+  --color-brand-tint-2: #dce7f9;
+  --color-brand-soft: #8caeec;
+
+  --color-coral: #f78b77;
+  --color-coral-deep: #e4674f;
+  --color-coral-tint: #fdeae5;
+
+  --color-lilac-tint: #e9e5fb;
+  --color-lilac: #7c6bd6;
+
+  --color-line: #e6e9ef;
+  --color-line-strong: #d5dae3;
+
+  /* ---- Type ----------------------------------------------------------- */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+
+  /* ---- Radii ---------------------------------------------------------- */
+  --radius-card: 25px;
+  --radius-media: 24px;
+
+  /* ---- Motion --------------------------------------------------------- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  * { border-color: var(--color-line); }
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4 { color: var(--color-heading); font-weight: 800; line-height: 1.15; }
+}
